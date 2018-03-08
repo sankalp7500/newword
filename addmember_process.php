@@ -3,12 +3,12 @@ session_start();
 include 'db_connect.php'; 
 $con=connect();
 
-$name=preg_replace('/\s+/', '', $name=$con->real_escape_String($_REQUEST['name']));
-$section=$con->real_escape_String($_REQUEST['sec']);
-$branch=$con->real_escape_String($_REQUEST['bran']);
-$rollno=$con->real_escape_String($_REQUEST['roll_no']);
-$stuid=$con->real_escape_String($_REQUEST['student_id']);
-$passwd=preg_replace('/\s+/', '', $passwd=$con->real_escape_String($_REQUEST['password']));
+$name=trim($name=$con->real_escape_String($_REQUEST['name']));
+$section=trim($section=$con->real_escape_String($_REQUEST['sec']));
+$branch=trim($branch=$con->real_escape_String($_REQUEST['bran']));
+$rollno=trim($rollno=$con->real_escape_String($_REQUEST['roll_no']));
+$stuid=trim($stuid=$con->real_escape_String($_REQUEST['student_id']));
+$passwd=trim($passwd=$con->real_escape_String($_REQUEST['password']));
 
 if(isset($name) && isset($section) && isset($branch) && isset($rollno) && isset($stuid) && isset($passwd)) 
 {

@@ -2,8 +2,8 @@
 session_start();
 include 'db_connect.php'; 
 $con=connect();
-$name=preg_replace('/\s+/', '', $name=$con->real_escape_String($_REQUEST['memname']));
-$password=preg_replace('/\s+/', '', $password=$con->real_escape_String($_REQUEST['pass']));
+$name=trim($name=$con->real_escape_String($_REQUEST['memname']));
+$password=trim($password=$con->real_escape_String($_REQUEST['pass']));
 
 $_SESSION['name']=$name;
 $_SESSION['passwd']=$password;

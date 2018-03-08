@@ -3,8 +3,8 @@ session_start();
 include 'db_connect.php'; 
 $con=connect();
 
-$admin_name=$con->real_escape_String($_REQUEST['username']);
-$password=$con->real_escape_String($_REQUEST['password']);
+$admin_name=trim($con->real_escape_String($_REQUEST['username']));
+$password=trim($con->real_escape_String($_REQUEST['password']));
 $_SESSION['name']=$admin_name;
 $_SESSION['passwd']=$password;
 $sql="SELECT * FROM admins WHERE name='$admin_name' AND password='$password'";

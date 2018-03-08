@@ -178,29 +178,10 @@ canvas
 <input type="submit" value="Add" name="Add" />
 <br></form><hr>
 
-<form class="inputform" action=" " method="post" name="form2">
+<form class="inputform" action="remove_member.php" method="post" name="form2">
 <p style="color: black;"><em><strong>Remove existing member.</strong></em></p><br>
 <table>
 <tr><td>*Name: </td><td><input type="text" name="name" value=" " /><td></tr>
-<tr><td>Branch: </td><td><select class="bloginp" name="bran" form="form2">
-  <option value="branch">branch</option>
-  <option value="CS">CS</option>
-  <option value="CS-BDA">CS-BDA</option>
-  <option value="CS-CCV">CS-CCV</option>
-  <option value="MEC">MEC</option>
-  <option value="CIVIL">CIVIL</option>
-</select></td></tr>
-<tr><td>Section: </td><td><select class="bloginp" name="sec" form="form2">
-  <option value="section">section</option>
-  <option value="A">A</option>
-  <option value="B">B</option>
-  <option value="C">C</option>
-  <option value="D">D</option>
-  <option value="E">E</option>
-  <option value="F">F</option>
-  <option value="G">G</option>
-  <option value="H">H</option>
-</select></td></tr>
 <tr><td>*Roll No.: </td><td><input type="number" name="roll_no" value=" " /><td></tr>
 <tr><td>Student ID: </td><td><input type="number" name="student_id" value=" " /><td></tr>
 </table>

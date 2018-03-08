@@ -150,11 +150,34 @@ canvas
 <form class="inputform" action=" " method="post" name="form1">
 <input type="file" name="file" value="upload file.." multiple />
 <br><br><table>
-<tr><td>Year:</td><td><input type="number" name="year" value=" " /></td></tr>
-<tr><td>Branch:</td><td><input type="text" name="branch" value=" " /></td></tr>
-<tr><td>Section:</td><td><input type="text" name="section" value=" " /></td></tr>
-<tr><td>Article:</td><td><input type="radio" name="no" value="no"/> NO
-  <input type="radio" name="yes" value="yes"/> YES</td></tr></table><br>
+<tr><td>Branch: </td><td><select class="bloginp" name="bran">
+  <option value="year">year</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+</select></td></tr>
+<tr><td>Branch: </td><td><select class="bloginp" name="bran">
+  <option value="branch">branch</option>
+  <option value="CS">CS</option>
+  <option value="CS-BDA">CS-BDA</option>
+  <option value="CS-CCV">CS-CCV</option>
+  <option value="MEC">MEC</option>
+  <option value="CIVIL">CIVIL</option>
+</select></td></tr>
+<tr><td>Section: </td><td><select class="bloginp" name="sec">
+  <option value="section">section</option>
+  <option value="A">A</option>
+  <option value="B">B</option>
+  <option value="C">C</option>
+  <option value="D">D</option>
+  <option value="E">E</option>
+  <option value="F">F</option>
+  <option value="G">G</option>
+  <option value="H">H</option>
+</select></td></tr>
+<tr><td>Article:</td><td><input type="radio" name="art" value="no"/> NO
+  <input type="radio" name="art" value="yes"/> YES</td></tr></table><br>
 Description (Article):<br> <textarea name="description" cols="30" rows="8"></textarea></p>
 <br>
 <!-- enter the id and name of the uploading member using hidden input. for that get the id and name from 
