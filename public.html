@@ -1,0 +1,235 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body { margin: 0;
+		color: white;
+		background-color: #2a2727; }
+#main  { background-color: white; 
+		width: 100%;
+		overflow: hidden;
+		margin: 0;
+		}
+#bottom {margin: 0;
+		clear: both;
+		border: 1px solid blue;
+		width: 100%;
+		background-color: white; }
+.ubody { background-color: white;
+		width: 100%;
+		margin: 0;}
+img { width: 100%;
+		height: auto;
+		
+		}
+ul {
+    list-style-type: none;
+    margin: 0;
+	width: 100%;
+    padding: 0;
+	border-radius: 6px;
+    overflow: hidden;
+	background: linear-gradient(rgb(42,101,247), blue);	
+}
+li {
+    float: right;
+}
+li a { 
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #000000;
+	font-size: 120%;
+}
+#ditinfo { background-color: #3a3f3f; 
+			height: 130px;
+		}
+.lbody {margin: 0; 
+		width:100%;
+		height: auto; }
+.col1{ width: 15%;
+		height: 100%;
+		float: left;
+		background-color: #2a2727;
+		text-align: center;
+		}
+.col2{ width: 60%; height: auto;
+		background-color: #302f2f;
+		float: left;
+		text-align: center;
+		}
+.col3{ width: 25%; 
+		background-color: #202626;
+		float: right;
+		text-align: center;
+		}
+footer { 
+		clear: both;
+		background-color: #3a3f3f; }
+header { background: linear-gradient(red, maroon);
+		margin: 0;
+		border-radius: 8px;
+		width: 100%; height: 25px; 
+		font-size: 1.2em;
+		font-weight: bold; }
+header.blogbody { background: linear-gradient(rgb(42,101,247), #2a2727);
+		margin: 0;
+		border-radius: 8px;
+		width: 100%; height: 30px; 
+		font-size: 1.2em;
+		font-weight: bold; }
+form.sort_by{float: right;
+			font-size: 0.9em;
+			 }
+input.bloginp, select.bloginp { color: black;
+		height: 70%;
+		border-radius: 3px;
+		font-weight: bold;}
+.toplink
+{
+width: 100%;
+margin: 0;
+height: 130px;
+background-color:white;
+}
+#sidelink {
+		margin: 0;
+	background-color:#2a2727; 
+	width: 50%; }
+	
+#popupbox1, #popupbox2{
+margin: 0; 
+margin-left: 40%; 
+margin-right: 40%;
+margin-top: 50px; 
+padding-top: 10px; 
+width: 250px; 
+height: 40%; 
+position: fixed; 
+background: #2a2525; 
+border: solid #000000 1px; 
+z-index: 0; 
+font-family: arial; 
+visibility: hidden; 
+}
+</style>
+
+<script language="JavaScript" type="text/javascript">
+function login1(showhide){
+if(showhide == "show1"){
+    document.getElementById('popupbox1').style.visibility="visible";
+}else if(showhide == "hide1"){
+    document.getElementById('popupbox1').style.visibility="hidden";
+	}
+	}
+function login2(showhide){
+if(showhide == "show2"){
+    document.getElementById('popupbox2').style.visibility="visible";
+}else if(showhide == "hide2"){
+    document.getElementById('popupbox2').style.visibility="hidden"; 
+}
+}
+</script>
+
+</head>
+<body>
+
+<div class="ubody">
+<img src="ditlo.jpg"></img>
+</div>
+
+<div id="popupbox1"> 
+<a style="margin-left: 210px;" href="javascript:login1('hide1');"><i class="fa fa-times-circle fa-2x" style="color: #ffdfdf; "></i></a><br>
+<form name="login1" action="admin_process.php" method="post">
+<center><p style="color: white; ">Admin Username:</p></center>
+<center><input name="username" type="text" size="14" /></center>
+<center><p style="color: white; ">Password:</p></center>
+<center><input name="password" type="password" size="14" /></center><br>
+<center><input type="submit" name="submit" value="login" /></center>
+</form> 
+</div> 
+
+<div id="popupbox2"> 
+<a style="margin-left: 210px;" href="javascript:login2('hide2');"><i class="fa fa-times-circle fa-2x" style="color: #ffdfdf; "></i></a><br>
+<form name="login2" action="members_process.php" method="post">
+<center><p style="color: white; ">Member Username:</p></center>
+<center><input name="memname" type="text" size="14" /></center>
+<center><p style="color: white; ">Password:</p></center>
+<center><input name="pass" type="password" size="14" /></center><br>
+<center><input type="submit" name="submit" value="login" /></center>
+</form> 
+</div> 
+
+<div id="bottom">
+<ul>
+<li><a href=""><i class="fa fa-question-circle-o" style="color: white;"></i></a></li>
+<li><a href="javascript:login1('show1');"><i class="fa fa-user" style="color: white;"></i>&nbsp;Admins</a></li>
+<li><a href="javascript:login2('show2');"><i class="fa fa-users" style="color: white;"></i>&nbsp;Members</a></li>
+</ul>
+</div>
+
+<div id="ditinfo">
+<canvas id="layer1" class="toplink">
+<script  type="text/javascript" src="tmp.js"></script>
+</canvas>
+<canvas id="layer2">
+<script  type="text/javascript" src="tmp.js"></script>
+</canvas>
+</div>
+
+<article class="lbody">
+
+<div class="col1">
+<header><strong>LINKS</strong></header>
+
+</div>
+
+<div class="col2">
+<header class="blogbody">
+<form class="sort_by" action=" " method="post" name="body_form">
+Sort By: <select class="bloginp" name="year">
+  <option value="year">year</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+</select>
+<select class="bloginp" name="branch">
+  <option value="branch">branch</option>
+  <option value="CS">CS</option>
+  <option value="CS-BDA">CS-BDA</option>
+  <option value="CS-CCV">CS-CCV</option>
+  <option value="MEC">MEC</option>
+  <option value="CIVIL">CIVIL</option>
+</select>
+<select class="bloginp" name="section">
+  <option value="section">section</option>
+  <option value="A">A</option>
+  <option value="B">B</option>
+  <option value="C">C</option>
+  <option value="D">D</option>
+  <option value="E">E</option>
+  <option value="F">F</option>
+  <option value="G">G</option>
+  <option value="H">H</option>
+</select>
+<input class="bloginp" type="submit" value="Go" name="submit_sort" /></form>
+</header>
+<h2>body here</h2><br><p>every post comes in<br>a seperate division element<br>in white background<br>from backend<br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+
+<div class="col3"><h2>notice and news here</h2><br><p>news blocks<br>float here in time<br>sequence set in<br>
+javascript <br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+</div>
+
+</article>
+<footer>This is Footer</footer>
+
+</body>
+</html>
